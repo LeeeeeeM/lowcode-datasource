@@ -34,6 +34,7 @@ export interface InterpretDataSourceConfig {
     params?: JSONObject | JSExpression;
     method?: string | JSExpression;
     isCors?: boolean | JSExpression;
+    withCredentials?: boolean | JSExpression;
     timeout?: number | JSExpression;
     headers?: JSONObject | JSExpression;
     [option: string]: CompositeValue;

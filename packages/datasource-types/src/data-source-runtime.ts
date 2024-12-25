@@ -42,6 +42,7 @@ export interface RuntimeOptionsConfig {
   params?: Record<string, unknown>;
   method?: string;
   isCors?: boolean;
+  withCredentials?: boolean;
   timeout?: number;
   headers?: Record<string, unknown>;
   [option: string]: unknown;

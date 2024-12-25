@@ -9,7 +9,7 @@ import {
   RuntimeDataSourceConfig,
 } from '@alilc/lowcode-types';
 
-import { ExtraConfig } from '@alilc/lowcode-datasource-types';
+import { ExtraConfig } from '@evilemon/lowcode-datasource-types';
 
 
 import { defaultDataHandler, defaultWillFetch } from '../helpers';

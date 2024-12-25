@@ -49,6 +49,7 @@ export interface DataSourceConfig {
         params?: JSONObject | JSExpression;
         method?: string | JSExpression;
         isCors?: boolean | JSExpression;
+        withCredentials?: boolean | JSExpression;
         timeout?: number | JSExpression;
         headers?: JSONObject | JSExpression;
         [option: string]: CompositeValue;
@@ -72,6 +73,7 @@ export interface RuntimeOptionsConfig {
     params?: Record<string, unknown>;
     method?: string;
     isCors?: boolean;
+    withCredentials?: boolean;
     timeout?: number;
     headers?: Record<string, unknown>;
     shouldFetch?: (options: RuntimeDataSourceConfig) => boolean;

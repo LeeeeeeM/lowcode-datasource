@@ -10,7 +10,7 @@ import {
   RuntimeOptionsConfig,
 } from '@alilc/lowcode-types';
 
-import { CompositeValue, JSONObject } from '@alilc/lowcode-datasource-types';
+import { CompositeValue, JSONObject } from '@evilemon/lowcode-datasource-types';
 
 function isObject(obj: unknown) {
   return Object.prototype.toString.call(obj).indexOf('Object') !== -1;
@@ -125,6 +125,7 @@ export const buildOptions = (ds: InterpretDataSourceConfig, context: IDataSource
       params: {},
       method: 'GET',
       isCors: true,
+      withCredentials: false,
       timeout: 5000,
       headers: undefined,
       v: '1.0',
@@ -142,6 +143,9 @@ export const buildOptions = (ds: InterpretDataSourceConfig, context: IDataSource
           break;
         case 'isCors':
           fetchOptions.isCors = getRuntimeValueFromConfig('boolean', options.isCors, context);
+          break;
+        case 'withCredentials':
+          fetchOptions.withCredentials = getRuntimeValueFromConfig('boolean', options.withCredentials, context);
           break;
         case 'timeout':
           fetchOptions.timeout = getRuntimeValueFromConfig('number', options.timeout, context);

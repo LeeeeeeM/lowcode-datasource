@@ -10,6 +10,7 @@ export type DataSourceOptions<TParams = Record<string, unknown>> = {
   params?: TParams;
   method?: string;
   isCors?: boolean;
+  withCredentials?: boolean;
   timeout?: number;
   headers?: Record<string, string>;
   isSync?: boolean;
